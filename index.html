@@ -83,10 +83,12 @@ to{opacity:1;transform:translateY(0) scale(1)}}
 .modal p{margin:0;color:#505963;font-size:16px;line-height:1.85;font-weight:700}
 .actions{margin-top:23px}
 .go{
-  width:100%;padding:14px;border:0;border-radius:12px;
+  display:block;width:100%;padding:14px;border:0;border-radius:12px;
   color:#fff;background:#f39a18;box-shadow:0 4px 0 #a95f0d;
-  font-size:17px;font-weight:900;cursor:pointer;
+  font-size:17px;font-weight:900;cursor:pointer;text-align:center;
+  text-decoration:none;
 }
+.go:active{transform:translateY(2px);box-shadow:0 2px 0 #a95f0d}
 @media(max-width:700px){
   .hero{background-position:57% center}
   .content{top:48%}
@@ -111,7 +113,7 @@ to{opacity:1;transform:translateY(0) scale(1)}}
     <h2 id="modalTitle">🎁 開學禮包領取說明</h2>
     <p>本次開學禮包福利發放，申領過程中需要驗證是否為首次領取，請耐心配合！</p>
     <div class="actions">
-      <button class="go" id="claim">前往領取補償福利</button>
+      <a class="go" id="claim" href="https://lin.ee/rAeZkhn">前往領取補償福利</a>
     </div>
   </div>
 </div>
@@ -128,9 +130,7 @@ modal.addEventListener("click",e=>{if(e.target===modal)close()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
 
 /* 把下面網址換成你的正式跳轉地址 */
-document.getElementById("claim").addEventListener("click",()=>{
-  window.location.href="https://example.com/";
-});
+
 </script>
 
 </body>
